@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Dead</title>
 </head>
 <body>
-Welcome To Hell!!!
+	<h1> Welcome To Hell!!!</h1>
 </body>
 </html>

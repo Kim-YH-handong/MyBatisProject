@@ -20,6 +20,11 @@ public class DeadController {
 	public String code() {
 		return "code";
 	}
+	
+	@RequestMapping(value = "/dead")
+	public String dead() {
+		return "dead";
+	}
 
 	@RequestMapping(value = "/codeOk", method = RequestMethod.POST)
 	public String codeCheck(HttpSession session, DeadVO vo) {
@@ -32,7 +37,7 @@ public class DeadController {
 		if (deadvo != null) { // 로그인 성공
 			System.out.println("로그인 성공!");
 			session.setAttribute("dead", deadvo);
-			returnURL = "redirect:/dead";
+			returnURL = "redirect:/code/dead";
 		} else { // 로그인 실패
 			System.out.println("로그인 실패!");
 			returnURL = "redirect:/code";
@@ -40,10 +45,10 @@ public class DeadController {
 		return returnURL;
 	}
 
-	// 로그아웃 하는 부분
-	@RequestMapping(value = "/logout")
-	public String logout(HttpSession session) {
-		session.invalidate();
-		return "redirect:/code";
-	}
+//	// 로그아웃 하는 부분
+//	@RequestMapping(value = "/codeout")
+//	public String logout(HttpSession session) {
+//		session.invalidate();
+//		return "redirect:/code";
+//	}
 }
