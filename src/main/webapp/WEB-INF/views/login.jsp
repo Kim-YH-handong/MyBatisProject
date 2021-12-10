@@ -12,7 +12,7 @@
 				<label>ID: </label><input type='text' name='userid' />
 			</div>
 			<div>
-				<label>Password: </label><input type='text' name='password' />
+				<label>Password: </label><input type='password' name='password' />
 			</div>
 			<button type='submit'>SUBMIT</button>
 	</form>

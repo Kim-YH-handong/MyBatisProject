@@ -25,7 +25,7 @@ button {
 	<div style='width: 100%; text-align: center; padding-top: 100px'>
 		<form method="post" action="code/codeOk">
 			<div>
-				<label>Code: </label><input type='text' name='code' />
+				<label>Code: </label><input type='password' name='code' />
 			</div>
 			<button type='submit'>SUBMIT</button>
 		</form>
