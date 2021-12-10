@@ -40,5 +40,19 @@ public class FuneralController {
 		}
 		return returnURL;
 	}
+	
+	@RequestMapping(value = "/signUp", method = RequestMethod.GET)
+	public String signUp() {
+		return "signUp";
+	}
+	
+	@RequestMapping(value = "/signUp/signUpOk", method = RequestMethod.POST)
+	public String signUpOk(HttpSession session, UserVO vo) {
+//		String returnURL = "";
+		
+		service.insertUser(vo);
+		
+		return "redirect:/login";
+	}
 
 }

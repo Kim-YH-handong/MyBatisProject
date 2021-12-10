@@ -16,6 +16,10 @@ public class UserServiceImpl {
 	public UserVO getUser(UserVO vo) {
 		return userDAO.getUser(vo);
 	}
+	
+	public void insertUser(UserVO vo) {
+		userDAO.insertUser(vo);
+	}
 }
 
 //test

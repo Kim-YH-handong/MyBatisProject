@@ -5,4 +5,10 @@
 		select userid, realname from USER
 		where userid=#{userid} and password=#{password}
 	</select>
+	
+	<select id="insertUser">
+		INSERT INTO USER (userid, password, realname)
+		VALUES (#{userid}, #{password}, #{realname})
+	</select>
+	
 </mapper>
