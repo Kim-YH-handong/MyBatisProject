@@ -17,3 +17,5 @@ public class UserServiceImpl {
 		return userDAO.getUser(vo);
 	}
 }
+
+//test
