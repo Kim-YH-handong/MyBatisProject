@@ -11,6 +11,7 @@ import com.app.app.service.DeadServiceImpl;
 import com.app.app.vo.DeadVO;
 
 @Controller
+@RequestMapping(value = "/code")
 public class DeadController {
 	@Autowired
 	DeadServiceImpl service;
@@ -25,7 +26,7 @@ public class DeadController {
 		return "dead";
 	}
 
-	@RequestMapping(value = "/code/codeOk", method = RequestMethod.POST)
+	@RequestMapping(value = "/codeOk", method = RequestMethod.POST)
 	public String codeCheck(HttpSession session, DeadVO vo) {
 		System.out.println(vo.getCode());
 		String returnURL = "";
@@ -42,11 +43,6 @@ public class DeadController {
 			returnURL = "redirect:/code";
 		}
 		return returnURL;
-	}
-	
-	@RequestMapping(value = "/dead")
-	public String dead() {
-		return "dead";
 	}
 
 //	// 로그아웃 하는 부분
