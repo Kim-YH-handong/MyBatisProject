@@ -17,6 +17,6 @@ public class UserDAO {
 	}
 	
 	public void insertUser(UserVO vo) {
-		sqlSession.selectOne("User.insertUser", vo);
+		sqlSession.insert("User.insertUser", vo);
 	}
 }
