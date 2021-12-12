@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" session="true"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import ="com.app.app.vo.DeadVO" %>
+<%@ page import ="com.app.app.vo.DeadVO, com.app.app.vo.CommentVO" %>
 <%
 	DeadVO vo = (DeadVO)session.getAttribute("dead") ;
 %>
@@ -62,25 +62,35 @@
 			<td><%=vo.getPlace()%></td>
 		</tr>
 	</table>
+	<form action="addok" method="post">
+		<table id="comment">
+			<tr>
+				<th><input type="text" name="name" /></th>
+				<th><input type="text" name="content" /></th>
+				<th>
+					<select name="relation">
+						<option value="family">가족</option>
+						<option value="friend">친구</option>
+						<option value="relative">친척</option>
+					</select>
+				</th>
+				<th><button type='submit'>SUBMIT</button></th>
+			</tr>
+		</table>
+	</form>
 	<table id="list">
 		<tr>
-			<th>Id</th>
-			<th>Title</th>
-			<th>Writer</th>
-			<th>Weather</th>
-			<th>mood</th>
-			<th>Content</th>
-			<th>Regdate</th>
+			<th>NAME</th>
+			<th>RELATION</th>
+			<th>CONTENT</th>
+			<th>DATE</th>
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
 		<c:forEach items="${list}" var="u">
 			<tr>
-				<td>${u.seq}</td>
-				<td>${u.title}</td>
-				<td>${u.writer}</td>
-				<td>${u.weather}</td>
-				<td>${u.mood}</td>
+				<td>${u.name}</td>
+				<td>${u.relation}</td>
 				<td>${u.content}</td>
 				<td>${u.regdate}</td>
 				<td><a href="editform/${u.seq}">글수정</a></td>
@@ -88,6 +98,8 @@
 			</tr>
 		</c:forEach>
 	</table>
+	
+	<br />
 
 </body>
 </html>

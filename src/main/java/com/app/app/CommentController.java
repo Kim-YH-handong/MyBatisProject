@@ -11,25 +11,15 @@ import com.app.app.service.CommentServiceImpl;
 import com.app.app.vo.CommentVO;
 
 @Controller
-@RequestMapping(value = "/comment")
+@RequestMapping(value = "/code")
 public class CommentController {
 	@Autowired
 	CommentServiceImpl commentService;
 	
-	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/dead", method = RequestMethod.GET)
 	public String boardlist(Model model) {
 		model.addAttribute("list", commentService.getCommentList());
-		return "list";
-	}
-//	@RequestMapping(value = "/ex", method = RequestMethod.GET)
-//	public String exlist(Model model) {
-//		model.addAttribute("list", boardService.getBoardList());
-//		return "/board/ex";
-//	}
-	
-	@RequestMapping(value = "/add", method = RequestMethod.GET)
-	public String addComment() {
-		return "addform";
+		return "dead";
 	}
 	
 	@RequestMapping(value = "/addok", method = RequestMethod.POST)
@@ -39,14 +29,14 @@ public class CommentController {
 			System.out.println("데이터 추가 실패");
 		else
 			System.out.println("데이터 추가 성공!!");
-		return "redirect:list";
+		return "redirect:dead";
 	}
 	
 	@RequestMapping(value = "/editform/{id}", method = RequestMethod.GET)
 	public String editPost(@PathVariable("id") int id, Model model){
 		CommentVO commentVO = commentService.getComment(id);
 		model.addAttribute("commentVO", commentVO);
-		return "/board/editform";
+		return "/editform";
 	}
 	
 	@RequestMapping(value = "/editok", method = RequestMethod.POST)
@@ -56,7 +46,7 @@ public class CommentController {
 			System.out.println("데이터 추가 실패");
 		else
 			System.out.println("데이터 추가 성공!!!");
-		return "redirect:list";
+		return "redirect:dead";
 	}
 	
 	@RequestMapping(value = "/deleteok/{id}", method = RequestMethod.GET)
@@ -66,6 +56,6 @@ public class CommentController {
 			System.out.println("데이터 삭제 실패");
 		else
 			System.out.println("데이터 삭제 성공!!");
-		return "redirect:../list";
+		return "redirect:../dead";
 	}
 }

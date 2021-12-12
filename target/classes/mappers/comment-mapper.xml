@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Comment">
 	<insert id = "insertComment">
-		insert into COMMENT (name, content) values (#{name}, #{content})
-		insert into COMMENT (name) select name from USER where name="최성찬"
+		insert into COMMENT (name, relation, content) values (#{name}, #{relation}, #{content})
+<!-- 		insert into COMMENT (name) select name from USER where name="최성찬" -->
 	</insert>
 	<update id="updateComment">
 		update COMMENT set name=#{name}, content=#{content} where seq=#{seq}
