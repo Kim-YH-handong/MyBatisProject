@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +14,7 @@
 			<div>
 				<label>Password: </label><input type='password' name='password' />
 			</div>
+			<input type="button" value="회원가입" onclick="location.href='signUp'">
 			<button type='submit'>SUBMIT</button>
 	</form>
 </body>
