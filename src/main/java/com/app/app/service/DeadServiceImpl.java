@@ -7,11 +7,12 @@ import com.app.app.dao.DeadDAO;
 import com.app.app.vo.DeadVO;
 
 @Service
-public class DeadServiceImpl {
+public class DeadServiceImpl implements DeadService{
 
 	@Autowired
 	DeadDAO deadDAO;
 
+	@Override
 	public DeadVO getDead(DeadVO vo) {
 		return deadDAO.getDead(vo);
 	}

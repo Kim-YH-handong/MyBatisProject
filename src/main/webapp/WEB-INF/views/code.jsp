@@ -5,30 +5,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Code</title>
-<style>
-img, label {
-	display: inline-block;
-}
-
-label {
-	width: 130px
-}
-
-button {
-	background-color: white;
-	color: black;
-	font-size: 15px
-}
-</style>
+<link rel="stylesheet" href="./css/code.css" type="text/css">
+<script src="./code.js"></script>
 </head>
+
 <body>
-	<div style='width: 100%; text-align: center; padding-top: 100px'>
-		<form method="post" action="code/codeOk">
-			<div>
-				<label>Code: </label><input type='password' name='code' />
-			</div>
-			<button type='submit'>SUBMIT</button>
-		</form>
-	</div>
+    <div class="container">
+        <form class="form" id="login" method="post" action="code/codeOk">
+            <h1 class="form__title">CODE CHECK</h1>
+            <div class="form__message form__message--error"></div>
+
+            <div class="form__input-group">
+                <input type="password" name="code" class="form__input" autofocus placeholder="Please Input Valid Code">
+                <div class="form__input-error-message"></div>
+            </div>
+
+            <button id="btn" class="form__button" type="submit" onmouseover="mover()" onmouseout="mout()">Continue</button>
+
+            <p class="form__text">
+                <a href="#" class="form__link">Forgot your password?</a>
+            </p>
+
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+            </p>
+        </form>
+    </div>
 </body>
 </html>
