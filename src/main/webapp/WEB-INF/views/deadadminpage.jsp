@@ -158,11 +158,6 @@ html {
 	<form action="addok" method="post">
 		<table id="comment">
 			<tr>
-				<th>이름</th>
-				<th>조문</th>
-				<th>관계</th>
-			</tr>
-			<tr>
 				<th><input type="text" name="name" /></th>
 				<th><input type="text" name="content" /></th>
 				<th>
@@ -178,19 +173,12 @@ html {
 	</form>
 	<table id="list">
 		<tr>
-<<<<<<< HEAD
-			<th>이름</th>
-			<th>관계</th>
-			<th>내용</th>
-			<th>날짜</th>
-			<th>수정</th>
-			<th>삭제</th>
-=======
 			<th>NAME</th>
 			<th>RELATION</th>
 			<th>CONTENT</th>
 			<th>DATE</th>
->>>>>>> branch 'master' of https://github.com/Kim-YH-handong/MyBatisProject.git
+			<th>Edit</th>
+			<th>Delete</th>
 		</tr>
 		<c:forEach items="${list}" var="u">
 			<tr>
@@ -198,6 +186,8 @@ html {
 				<td>${u.relation}</td>
 				<td>${u.content}</td>
 				<td>${u.regdate}</td>
+				<td><a href="editform/${u.seq}">글수정</a></td>
+				<td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
 			</tr>
 		</c:forEach>
 	</table>

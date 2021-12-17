@@ -62,7 +62,7 @@
 				<td>${u.letter}</td>
 				<td>${u.place}</td>
 				<td>
-					<form method="post" action="codeOk">
+					<form method="post" action="deadOk">
 						<input type="hidden" name="code" value="${u.code}">
 						<button type="submit">이동하기</button>
 					</form>
