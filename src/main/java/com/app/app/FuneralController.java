@@ -31,9 +31,15 @@ public class FuneralController {
 		}
 		UserVO uservo = service.getUser(vo);
 		if (uservo != null) { // 로그인 성공
-			System.out.println("로그인 성공!");
-			session.setAttribute("user", uservo);
-			returnURL = "redirect:/code";
+			if(uservo.getUserid().equals("admin")) {
+				System.out.println("work");
+				session.setAttribute("user", uservo);
+				returnURL = "redirect:/code/admin";
+			}else {
+				System.out.println("로그인 성공!");
+				session.setAttribute("user", uservo);
+				returnURL = "redirect:/code";	
+			}
 		} else { // 로그인 실패
 			System.out.println("로그인 실패!");
 			returnURL = "redirect:/login";
