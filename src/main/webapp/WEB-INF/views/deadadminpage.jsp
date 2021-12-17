@@ -4,6 +4,7 @@
 <%@ page import ="com.app.app.vo.DeadVO, com.app.app.vo.CommentVO" %>
 <%
 	DeadVO vo = (DeadVO)session.getAttribute("dead") ;
+
 %>
 <!DOCTYPE html>
 <html>

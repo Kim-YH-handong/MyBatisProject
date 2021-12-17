@@ -33,10 +33,11 @@ public class DeadController {
 		return "dead";
 	}
 	
-	@RequestMapping(value = "/deadadminpage")
-	public String deadadminpage() {
-		return "deadadminpage";
-	}
+//	@RequestMapping(value = "/deadadminpage")
+//	public String deadadminpage(Model model) {
+//		model.addAttribute("list", CommentServiceImpl().getCommentList());
+//		return "deadadminpage";
+//	}
 	
 	@RequestMapping(value = "/deadOk", method = RequestMethod.POST)
 	public String deadCheck(HttpSession session, DeadVO vo) {

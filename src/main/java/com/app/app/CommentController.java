@@ -22,6 +22,12 @@ public class CommentController {
 		return "dead";
 	}
 	
+	@RequestMapping(value = "/deadadminpage")
+	public String deadadminpage(Model model) {
+		model.addAttribute("list", commentService.getCommentList());
+		return "deadadminpage";
+	}
+	
 	@RequestMapping(value = "/addok", method = RequestMethod.POST)
 	public String addOK(CommentVO vo){
 		int i = commentService.insertComment(vo);
