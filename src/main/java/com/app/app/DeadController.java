@@ -16,7 +16,13 @@ import com.app.app.vo.DeadVO;
 public class DeadController {
 	@Autowired
 	DeadService service;
-
+	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String admin(Model model) {
+		model.addAttribute("code", service.getDeadList());
+		return "deadadmin";
+	}
+	
 	@RequestMapping(value = "/code")
 	public String code() {
 		return "code";

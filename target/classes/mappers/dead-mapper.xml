@@ -4,4 +4,7 @@
 	<select id="getDead" resultType="dead">
 		select * from DEAD where code=#{code}
 	</select>
+	<select id="getDeadList" resultType="dead">
+		select * from DEAD order by seq
+	</select>
 </mapper>
