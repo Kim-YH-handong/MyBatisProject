@@ -178,19 +178,10 @@ html {
 	</form>
 	<table id="list">
 		<tr>
-<<<<<<< HEAD
 			<th>이름</th>
 			<th>관계</th>
 			<th>내용</th>
 			<th>날짜</th>
-			<th>수정</th>
-			<th>삭제</th>
-=======
-			<th>NAME</th>
-			<th>RELATION</th>
-			<th>CONTENT</th>
-			<th>DATE</th>
->>>>>>> branch 'master' of https://github.com/Kim-YH-handong/MyBatisProject.git
 		</tr>
 		<c:forEach items="${list}" var="u">
 			<tr>
