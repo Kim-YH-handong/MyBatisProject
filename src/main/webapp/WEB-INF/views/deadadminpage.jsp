@@ -177,6 +177,8 @@ html {
 			<th>RELATION</th>
 			<th>CONTENT</th>
 			<th>DATE</th>
+			<th>Edit</th>
+			<th>Delete</th>
 		</tr>
 		<c:forEach items="${list}" var="u">
 			<tr>
@@ -184,6 +186,8 @@ html {
 				<td>${u.relation}</td>
 				<td>${u.content}</td>
 				<td>${u.regdate}</td>
+				<td><a href="editform/${u.seq}">글수정</a></td>
+				<td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
 			</tr>
 		</c:forEach>
 	</table>

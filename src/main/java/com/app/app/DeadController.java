@@ -32,6 +32,29 @@ public class DeadController {
 	public String dead() {
 		return "dead";
 	}
+	
+	@RequestMapping(value = "/deadadminpage")
+	public String deadadminpage() {
+		return "deadadminpage";
+	}
+	
+	@RequestMapping(value = "/deadOk", method = RequestMethod.POST)
+	public String deadCheck(HttpSession session, DeadVO vo) {
+		System.out.println(vo.getCode());
+		String returnURL = "";
+		if (session.getAttribute("code") != null) {
+			session.removeAttribute("code");
+		}
+		DeadVO deadvo = service.getDead(vo);
+		if (deadvo != null) { // 로그인 성공
+			session.setAttribute("dead", deadvo);
+			returnURL = "redirect:/code/deadadminpage";
+		} else { // 로그인 실패
+			System.out.println("로그인 실패!");
+			returnURL = "redirect:/deadadmin";
+		}
+		return returnURL;
+	}
 
 	@RequestMapping(value = "/codeOk", method = RequestMethod.POST)
 	public String codeCheck(HttpSession session, DeadVO vo) {
