@@ -72,7 +72,7 @@ body { -
 
 .form__title {
 	font-family: 'Staatliches';
-	font-size: 5em;
+	font-size: 3em;
 	text-align: center;
 	color: #000000;
 	text-shadow: 4px 4px #000000;
@@ -91,8 +91,7 @@ body { -
             <div class="form__message form__message--error"></div>
 
             <div class="form__input-group">
-                <input type="password" name="code" class="form__input" autofocus placeholder="Please Input Valid Code">
-                <div class="form__input-error-message"></div>
+                <input type="password" name="code" class="form_input" autofocus placeholder="Please Input Valid Code">
             </div>
 
             <button id="btn" class="form_button" type="submit">Continue</button>
