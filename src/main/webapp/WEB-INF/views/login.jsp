@@ -74,7 +74,7 @@ body { -
     font-size: 5em; 
     text-align: center; 
     color: #000000;
-    text-shadow: 4px 4px #000000; 
+    text-shadow: 4px 4px #808080; 
     margin: 0; 
     margin-bottom: 2rem;
     text-decoration: 
@@ -87,7 +87,6 @@ body { -
     text-align: center; 
     color: #000000;
  	margin: 0; 
-    margin-bottom: 1rem;
     text-decoration: 
     underline;
 }

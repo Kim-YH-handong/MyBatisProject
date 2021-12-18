@@ -73,7 +73,7 @@ body { -
 	font-size: 5em;
 	text-align: center;
 	color: #000000;
-	text-shadow: 4px 4px #000000;
+	text-shadow: 4px 4px #808080;
 	margin: 0;
 	margin-bottom: 2rem;
 	text-decoration: underline;
@@ -83,7 +83,7 @@ body { -
 
 <body>
 	<div class="container">
-		<h1 class="form__title">회원가입</h1>
+		<h1 class="form__title">SIGN UP</h1>
 		<form method="post" action="signUp/signUpOk">
 			<div>
 				<label>이름: </label><input  class="form_input" type='text' name='realname' />
