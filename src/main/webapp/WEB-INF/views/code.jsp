@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Code</title>
-<link rel="stylesheet" href="./css/code.css" type="text/css">
-<script src="./code.js"></script>
 <style>
 .center {
 	position: absolute;
