@@ -73,7 +73,7 @@ body { -
 	font-size: 3em;
 	text-align: center;
 	color: #000000;
-	text-shadow: 4px 4px #000000;
+	text-shadow: 2px 2px #808080;
 	margin: 0;
 	margin-bottom: 2rem;
 	text-decoration: underline;
